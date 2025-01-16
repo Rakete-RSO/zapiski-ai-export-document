@@ -96,3 +96,9 @@ async def export_document(
         media_type="application/vnd.openxmlformats-officedocument.wordprocessingml.document",
         headers={"Content-Disposition": f"attachment; filename={filename}"},
     )
+
+
+@app.get("/health-check")
+def health_check():
+    # return status 200
+    return {"status": "ok"}
